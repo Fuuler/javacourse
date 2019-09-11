@@ -1,0 +1,4 @@
+Выпуск 62. Зачем нужны индексы в базах данных.
+
+полезные запросы, создание индекса в базе данных
+CREATE INDEX jdx_student_order_status ON jc_student_order(student_order_status)
