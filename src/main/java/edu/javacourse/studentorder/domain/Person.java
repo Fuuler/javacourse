@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public abstract class Person {
 
   private String surName;
-  private String giveName;
+    private String givenName;
   private String patronymic;
   private LocalDate dateOfBirth;
   private Address addres;
@@ -13,19 +13,26 @@ public abstract class Person {
   public Person(){
   }
 
-  public Person(String surName, String giveName, String patronymic, LocalDate dateOfBirth, Address addres) {
+    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth, Address addres) {
     this.surName = surName;
-    this.giveName = giveName;
+        this.givenName = givenName;
     this.patronymic = patronymic;
     this.dateOfBirth = dateOfBirth;
     this.addres = addres;
   }
 
+    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
+        this.surName = surName;
+        this.givenName = givenName;
+        this.patronymic = patronymic;
+        this.dateOfBirth = dateOfBirth;
+    }
+
   public Address getAddres() {
     return addres;
   }
 
-  public void setAddres(Address addres) {
+    public void setAddress(Address addres) {
     this.addres = addres;
   }
 
@@ -37,12 +44,12 @@ public abstract class Person {
     this.surName = surName;
   }
 
-  public String getGiveName() {
-    return giveName;
+    public String getGivenName() {
+        return givenName;
   }
 
-  public void setGiveName(String giveName) {
-    this.giveName = giveName;
+    public void setGivenName(String givenName) {
+        this.givenName = givenName;
   }
 
   public String getPatronymic() {
